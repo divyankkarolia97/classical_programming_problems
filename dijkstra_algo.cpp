@@ -23,7 +23,6 @@ public:
 		queue<int> q;
 		bool visited[n]={};
 
-		//processing the first vertex
 		q.push(0);
 		visited[0] = true;
 		while(q.empty() == false){
@@ -64,7 +63,7 @@ public:
 		}
 
 		for(int i=0;i<n;i++){
-			cout<<setw(10) << i << setw(10)  << dist[i]<<endl;
+			cout<<setw(10) << i <<"--->" << setw(10)  << dist[i]<<endl;
 		}
 		cout << endl;
 	}
@@ -114,11 +113,10 @@ int main(){
     myGraph.addEdge( 6, 8, 6);
     myGraph.addEdge( 7, 8, 7);
 
-
+    cout <<"The BFS traversal of the graph is: \n\n\t";
 	myGraph.bfs();
 
-
-
+	cout <<"\nThe dist of vertex from the source vertex are: \n";
 	myGraph.dijkstra(0);
 
 	return 0;
